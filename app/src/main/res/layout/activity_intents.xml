@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".IntentsActivity">
+
+    <Button
+        android:id="@+id/botonMensaje"
+        android:text="@string/botonMensaje"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="30dp"
+        android:layout_centerHorizontal="true"
+        />
+
+    <LinearLayout
+        android:id="@+id/linear1"
+        android:layout_marginTop="50dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/botonMensaje"
+        android:gravity="center"
+        >
+        <EditText
+            android:hint="@string/telefono"
+            android:gravity="center"
+            android:inputType="phone"
+            android:id="@+id/editTextNumTelefono"
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:layout_marginRight="20dp"
+            />
+
+        <ImageButton
+            android:src="@android:drawable/stat_sys_phone_call"
+            android:scaleType="fitXY"
+            android:id="@+id/botonTelefono"
+            android:layout_width="50dp"
+            android:layout_height="50dp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout2"
+        android:layout_below="@+id/linear1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="50dp"
+        >
+
+        <EditText
+            android:hint="@string/url"
+            android:gravity="center"
+            android:inputType="textWebEditText"
+            android:id="@+id/editTextPaginaWeb"
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:layout_marginRight="20dp"
+            />
+
+        <ImageButton
+            android:src="@android:drawable/ic_menu_upload"
+            android:scaleType="fitXY"
+            android:id="@+id/botonPaginaWeb"
+            android:layout_width="50dp"
+            android:layout_height="50dp"/>
+
+    </LinearLayout>
+
+    <ImageButton
+        android:id="@+id/botonCamara"
+        android:src="@android:drawable/ic_menu_camera"
+        android:layout_marginTop="50dp"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        />
+
+
+</RelativeLayout>

@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MensajeActivity">
+    
+    <RadioGroup
+        android:layout_marginTop="30dp"
+        android:id="@+id/radioGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        >
+        
+        <RadioButton
+            android:id="@+id/radioDia"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/dia"
+            android:layout_marginRight="30dp"
+            android:textSize="20sp"
+            android:checked="true"
+            />
+        
+        <RadioButton
+            android:id="@+id/raidioNoche"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/noche"
+            android:textSize="20sp"
+            />
+        
+    </RadioGroup>
+    
+    <EditText
+        android:id="@+id/editTextNombre"
+        android:layout_marginTop="30dp"
+        android:layout_centerHorizontal="true"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:layout_below="@+id/radioGroup"
+        android:hint="@string/nombre"
+        android:gravity="center"
+        />
+    
+    <EditText
+        android:id="@+id/editTextMensaje"
+        android:hint="@string/escribe_un_mensaje"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/editTextNombre"
+        android:layout_width="250dp"
+        android:layout_height="100dp"
+        android:inputType="textMultiLine"
+        android:gravity="top"
+        android:layout_centerHorizontal="true"
+        android:background="#EEE"
+        />
+
+    <TextView
+        android:id="@+id/textViewMuestraEdad"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Edad: 30"
+        android:textSize="25dp"
+        android:layout_below="@+id/editTextMensaje"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="30dp"
+        />
+
+    <SeekBar
+        android:id="@+id/seekBarEdad"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_below="@+id/textViewMuestraEdad"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:progress="30"
+        android:max="100" />
+
+    <Button
+        android:id="@+id/buttonEnviar"
+        android:layout_marginTop="30dp"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_below="@id/seekBarEdad"
+        android:layout_centerHorizontal="true"
+        android:text="@string/enviarMensaje"
+        />
+
+</RelativeLayout>
